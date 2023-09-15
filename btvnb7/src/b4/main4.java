@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class main4 {
     public static void main(String[] args) {
         MyPoint[] points= nhapDiem();
-        distance(points);
+        maxDistance(points);
 
     }
     public static MyPoint[] nhapDiem(){
@@ -21,25 +21,27 @@ public class main4 {
         }
         return point;
     }
-    public static void distance(MyPoint[] point) {
+    public static void maxDistance(MyPoint[] point) {
         double max=0;
-        double a= 0;
-        double b = 0;
+        int a= 0;
+        int b = 0;
 
         for (int i = 0; i < point.length; i++) {
             for (int j = 0; j < point.length; j++) {
-                double x = Math.abs(point[i].x - point[j].x) * Math.abs(point[i].x - point[j].x);
-                double y = Math.abs(point[i].y - point[j].y) * Math.abs(point[i].y - point[j].y);
-                if (max<Math.sqrt(x + y)){
+                double x = Math.abs(point[i].x - point[j].x) ;
+                double y = Math.abs(point[i].y - point[j].y) ;
+
+                if (max<  Math.sqrt(x*x + y*y)){
                     max = Math.sqrt(x + y);
                     a=i;
                     b=j;
                 }
             }
-
         }
-        System.out.println("tạo độ điểm a");
-        System.out.println(max);
+        System.out.println("tạo độ điểm a: x="+ point[a].x+" y="+ point[a].y);
+        System.out.println("tạo độ điểm b: x="+ point[b].x+" y="+ point[b].y);
+
+        System.out.println("khoảng cách lớn nhất max= " +max);
     }
 
 

@@ -32,9 +32,9 @@ public class MyPoint {
     }
 
     public void nhapToaDo() {
-        System.out.println("x= ");
+        System.out.print("x= ");
         x = new Scanner(System.in).nextDouble();
-        System.out.println("y= ");
+        System.out.print("y= ");
         x = new Scanner(System.in).nextDouble();
     }
 
