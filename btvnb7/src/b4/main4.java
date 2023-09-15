@@ -32,7 +32,7 @@ public class main4 {
                 double y = Math.abs(point[i].y - point[j].y) ;
 
                 if (max<  Math.sqrt(x*x + y*y)){
-                    max = Math.sqrt(x + y);
+                    max = Math.sqrt(x*x + y*y);
                     a=i;
                     b=j;
                 }
